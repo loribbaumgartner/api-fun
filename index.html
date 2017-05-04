@@ -3,14 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>API</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="master.css">
   </head>
   <body>
-    <h2>Create page that has a single button on it. When I click the button, the following should happen:</h2>
-    <ul>
-      <li>content should be loaded via AJAX an API of your choice.</li>
-      <li>some (or all, up to you) of the content loaded from the API should be rendered onto the page with JavaScript.</li>
-      <li>your page should be styled with CSS</li>
-      <li>you should use at least one CSS transition or animation on your page.</li>
-    </ul>
+    <div class="row">
+      <div class="large-12 columns">
+        <h3>Random Color Generator</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <h4 id='color'></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <input type="text" name="userInput" id='userInput' value="" min='1' max='5000' step='1' placeholder='Enter number 1-5000 here'></input>
+      </div>
+      <div class="large-6 columns">
+        <button name="submit" class="submit">Color-Go</button>
+      </div>
+    </div>
+
+    <script src="api.js"></script>
   </body>
 </html>
