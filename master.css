@@ -24,7 +24,7 @@ input[type=text], input[type=text]:hover, input[type=text]:focus {
   border-bottom: 1px solid #efefef;
 }
 
-button, button:focus {
+button {
   font-size: 1rem;
   width: 100%;
   border-radius: 5px;
@@ -33,15 +33,51 @@ button, button:focus {
   box-shadow: none;
   border: none;
   background: #efefef;
+  animation: bounceIn 5s ease-in infinite;
+  animation-fill-mode: forwards;
 }
 
 button:hover, button:focus {
-  transition: all 0.6s ease;
-  background: #444444;
-  color: #fff;
+  animation-play-state: paused;
   font-weight: 700;
 }
 
 .margin-bottom-small {
   margin-bottom: 20px;
+}
+
+@keyframes bounceIn {
+  0% {
+    background: #dfffef;
+  }
+  10% {
+    background: #dbffed;
+  }
+  20% {
+    background: #d7ffeb;
+  }
+  30% {
+    background: #d3ffe9;
+  }
+  40% {
+    background: #c0e8d4;
+  }
+  50% {
+    background: #add1bf
+  }
+  60% {
+    background: #c0e8d4;
+  }
+  70% {
+    background: #d3ffe9;
+  }
+  80% {
+    background: #d7ffeb;
+  }
+  90% {
+    background: #dbffed;
+  }
+  100% {
+    background: #dfffef;
+  }
 }
